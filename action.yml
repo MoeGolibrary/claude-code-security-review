@@ -311,7 +311,7 @@ runs:
         node ${{ github.action_path }}/scripts/comment-pr-findings.js
 
     - name: Remove lock-related actions cache
-      if: always()
+      if: 'false'
       shell: bash
       run: gh cache delete --repo ${{ github.repository }} claudecode-${{ github.repository_id }}-pr-${{ github.event.pull_request.number }}-${{ github.sha }}
       env:
