@@ -51,7 +51,7 @@ inputs:
   refresh-comments:
     description: 'Whether to refresh security comments on new commits (delete old security comments and post new results)'
     required: false
-    default: 'true'
+    default: 'false'
 
 outputs:
   findings-count:
