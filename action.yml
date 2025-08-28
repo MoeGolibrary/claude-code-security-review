@@ -36,7 +36,7 @@ inputs:
   run-every-commit:
     description: 'Run ClaudeCode on every commit (skips cache check). Warning: This may lead to more false positives on PRs with many commits as the AI analyzes the same code multiple times.'
     required: false
-    default: 'false'
+    default: 'true'
 
   false-positive-filtering-instructions:
     description: 'Path to custom false positive filtering instructions text file'
