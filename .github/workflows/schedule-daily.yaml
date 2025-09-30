@@ -1,0 +1,22 @@
+name: Schedule Daily
+
+on:
+  schedule:
+    - cron: '0 16 * * *' # 16:00 UTC (00:00 China Standard Time UTC+8) every day
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run the deployment'
+        type: boolean
+        required: false
+      experimental_mat_tag:
+        description: 'Experimental version of moego-actions-tool CLI'
+        type: string
+        required: false
+
+jobs:
+  run:
+    uses: MoeGolibrary/moego-actions-tool/.github/workflows/preset-schedule-daily.yml@production
+    with:
+      dry_run: ${{ inputs.dry_run }}
+      experimental_mat_tag: ${{ inputs.experimental_mat_tag }}
